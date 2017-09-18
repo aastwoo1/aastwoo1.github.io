@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<title>SFG-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: TimesNewRoman;}
+textarea.one {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px
+    }
+ div.date { border-style: solid; border-width: 3px; text-align: center; font-family: TimesNewRoman;
+    
+}
+div.co{border-style: solid; border-width: 3px;}
+p {
+font-size:120%;
+font-family: TimesNewRoman;
+text-indent: 50px;
+line-height: 190%;
+
+
+}
+
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding-bottom:0px; padding-top:50px;"> 
+<div class="w3-row ">
+<div class="w3-col w3-container w3-large" style="width:25%">
+<ul class="w3-navbar">
+    <li><a class="w3-padding-2" href="#" onClick="location.href='blog.html'" ">Home</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('aboutMe').style.display='block'">About</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('contact').style.display='block'">Contact</a></li>
+  </ul>
+  
+<!--   target="_blank" -->
+
+</div>
+<div class="w3-col w3-container" style="width:55%">
+    <div class="w3-jumbo">The Lookout</div>
+
+</div>
+<div class="w3-col w3-container w3-large" style="width:20%">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<!-- About me modal page-->
+<div id="aboutMe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('aboutMe').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <h2>About me</h2>
+      </header>
+      <div class="w3-container">
+        <p>Spencer F. Goldberg</p>
+        <p>THE NEWS YOU DIDN'T KNOW YOU NEEDED TO KNOW</p>
+      </div>
+      <footer class="w3-container w3-black">
+        <p>Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+
+<!-- Contact modal page-->
+<div id="contact" class="w3-modal ">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container "> 
+        <span onclick="document.getElementById('contact').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <form action="form.asp" class="w3-container w3-card-4 w3-light-grey w3-text-white w3-margin">
+<h2 class="w3-center w3-dark-grey">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<button class="w3-btn-block w3-section w3-dark-grey w3-ripple w3-padding">Send</button>
+
+</form>
+    
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+</div>
+</header>
+<!-- End header-->
+<div class="date">
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+</div>
+
+
+<!-- Grid -->
+<div class="co">
+<div class="w3-row ">
+
+<!-- Blog entries -->
+<div class="w3-col 24 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="crowsMouth.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Bullies Don’t Win in America</b></h3>
+      <h5><span class="w3-opacity">November 10, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>Let us all hope that President Trump conducts himself much better than Candidate Trump.
+
+When the people of the United States of America chose Donald Trump for president yesterday, they sent a message to us all that basic human decency is no longer an expectation of our society. Trump has conducted his campaign with blatant disregard for even the semblance of politesse and class. This rude display should have been disqualifying in the eyes of voters.<br>
+
+Not all of our presidents have been decent human beings, nor should they have to be. Policy should dictate who we elect. If those policies come from an indecent person then so be it. This logic does not apply to Trump because Trump has never tried to even appear like a respectable member of society. All of our other presidents have made an effort to at least seem to be good people. In fact, all of us, every day, have to make an effort to at least appear to be decent human beings just to get through our daily lives. Perhaps some extraordinarily wealthy people don’t need to follow these norms if they do not want to. Most,
+ however, do so anyway. Trump, clearly, does not. His behavior during this campaign has been atrocious. To list Trump’s offenses is at this point an exercise in futility, we know that there are many things he has said and done during his lifetime and this campaign that are downright despicable. (I won’t bother listing any of them again, but just for good measure, here is a New York Times list of 282 people, places and things Trump has insulted on Twitter alone). America chose to overlook these things.<br>
+
+Trump’s behavior during his campaign was outrageous and irredeemable. The man has plodded along like a classic 90s playground bully. But unlike the bullies on television, Trump won. He even surrounded himself with other bullies as well. Men like Chris Christie, who just barely managed to keep himself out of jail for his illegal bullying antics in New Jersey, and Roger Ailes, whose bullying of female employees forced him to step down from the news network he created.<br>
+
+We grew up being taught that bullies would someday get their just desserts. Waking up to find America has voted for President Trump is like if Back to the Future ended with Marty McFly finding out that Biff is actually his father. Remember those two guys in The Mighty Morphin’ Power Rangers who would always start trouble and then run away when things got serious? They’re pretty much part of Trump’s cabinet. Remember how Draco Malfoy got his comeuppance after tormenting a poor orphaned Harry Potter and his ragtag group of friends? We were taught that bullies don’t win. But yesterday America gave a bully its highest office.<br>
+
+Many of us also grew up being taught that racism was a thing of the past. We believed that race did not matter, not because our schools were integrated (they were not) or because of our personal experiences (housing remains very much segregated) but because it is what we were taught by adults who should have known better. We continued to believe racism was over when we elected the first black president. Many of us want to believe this still today. Unfortunately, we no longer can.<br>
+
+As it was becoming increasingly apparent that Trump would become the 45th president last night, I briefly flipped the channel over to BET. I could only bear to watch for a moment. What I saw was a sad group of black Americans literally asking “What do we do now?” I am deeply ashamed that I cannot answer that question. I am deeply ashamed that I have nothing to say.<br>
+
+I am deeply ashamed that my girlfriend, who just became an American citizen this year, has been forced to endure the worst of us during the first election cycle in which she cast her vote. I don’t know what to tell her. I promised her America was better than this and that ultimately human decency was still an important enough value that it would prevent a man such as Trump from becoming our president. Apparently I was wrong. I am deeply ashamed that I have nothing to say.<br>
+
+I am deeply ashamed that my 88 year old grandmother, who walked two blocks in Yonkers yesterday with high hopes that she would help elect the first woman to become president, will instead be forced to see the man she describes as the human version of her colostomy bag take the nation’s highest office. I am saddened that my loving grandmother even felt compelled to compare a presidential candidate to her colostomy bag, but Trump has done little to behave in such a way that does not give such a comparison merit. I have not called my grandmother yet today. I am deeply ashamed that I have nothing to say.
+
+I am deeply ashamed about the sadness and heartbreak of my mother, who raised me to be a feminist and whose career as a school social worker over the past 30 years has focused on encouraging children to treat each other with kindness and not engage in the kind of bullying we have seen from the man who will now become our president. My mother is retiring this year and it feels as though her hard work has come to naught because in January the highest level of our government will belong to a man who is virtually the living definition of a bully. I do not know what to tell my mother. I am deeply ashamed that I have nothing to say.
+
+I am deeply ashamed for all parents – and grateful I am not one myself – who will have to explain to their children that sometimes, in real life, bullies do win. I do not know how one could tell, say, a middle schooler assigned a project on past presidents, to do her homework when the man who is about to become president of the United States has said he doesn’t read books and gets all of his information from television. I am deeply ashamed that I have nothing to say.<br>
+
+I am deeply ashamed that a candidate who has said and done the things Trump has said and done this year could be elected president of my country. Trump’s behavior on the campaign trail is offensive to Americans everywhere. It is not just the horrible things Trump has said but the insulting and demeaning way he went about campaigning. This is a man who has virtually no knowledge about how the government of the United States works. Rather than prepare for the responsibility of becoming president through study, Trump has refused to even prepare for debates or speeches. This behavior is an affront to all of us and I am deeply ashamed.<br>
+
+But I think I have found something to say.<br>
+
+Bullies don’t win in America. Trump will become president, yes, but those of us who care, those of us who take the things our leaders say seriously, those of us who believe that basic common courtesy is an important value in those who represent us, those of us who will not stand by and watch our black and brown friends and neighbors have their civil rights trampled beneath the rhetoric of a man who cares little for them, those of us who think that children in America deserve a president who at least pretends to be a role model and treat women with respect, those of us who believe we can do better, we must all work to ensure that never
+ again will a candidate like Trump get close to the Oval Office. We can do this by supporting the Movement for Black Lives and trying to help heal the old racial wounds that Trump has re-opened. We can donate to the ACLU and other organizations that protect our civil liberties. We can participate in our local elections. And most importantly we can all try to be a bit more decent to each other so that we may help exorcise this man’s divisive rhetoric from our country. These are just a few of the many things we can do to help mitigate the damage that our next president has already done to our democracy, I am certain there are many more. 
+ The election of Donald Trump is a stark example of what happens when we fail to stand up for causes that matter. We must help the country heal and move forward in spite of our momentary regressive failure so that we will never again have to be ashamed of the actions of our president-elect. We must move forward so that when we teach our children that racism is a thing of the past and that bullies don’t win in America, we will have proof.</p>
+      <div class="w3-row">
+    
+        <!-- 
+<div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+ -->
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+ <!-- 
+ <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+ -->
+  <p>Created by Alexandra Astwood</p>
+</footer>
+
+</body>
+</html>

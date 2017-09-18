@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<title>SFG-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: TimesNewRoman;}
+textarea.one {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px
+    }
+ div.date { border-style: solid; border-width: 3px; text-align: center; font-family: TimesNewRoman;
+    
+}
+div.co{border-style: solid; border-width: 3px;}
+p.par {
+font-size:120%;
+font-family: TimesNewRoman;
+text-indent: 50px;
+line-height: 150%;
+
+
+}
+input.f {
+width:200px;
+border-style: solid;
+border-color: black;
+}
+
+a:hover {
+    color: white;
+}
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+/* 
+    padding: 12px 20px 12px 40px;
+ */
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding-bottom:0px; padding-top:50px;"> 
+<div class="w3-row ">
+<div class="w3-col w3-container w3-large" style="width:25%">
+<ul class="w3-navbar">
+    <li class="w3-bottombar w3-hover-border-black w3-margin-right"><a class="w3-padding-2" href="#" onClick="location.href='blog.html'" value=''">Home</a></li>
+    <li class="w3-bottombar w3-hover-border-black w3-margin-right"><a class="w3-padding-2" href="#" onclick="document.getElementById('aboutMe').style.display='block'">About</a></li>
+    <li class="w3-bottombar w3-hover-border-black"><a class="w3-padding-2" href="#" onclick="document.getElementById('contact').style.display='block'">Contact</a></li>
+  </ul>
+  
+</div>
+<div class="w3-col w3-container" style="width:55%">
+    <div class="w3-jumbo">The Lookout</div>
+
+</div>
+<div class="w3-col w3-container w3-large" style="width:20%">
+    <a href="http://www.facebook.com" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="http://www.twitter.com" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="http://www.linkedin.com" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<!-- About me modal page-->
+<div id="aboutMe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('aboutMe').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <h2>About me</h2>
+      </header>
+      <div class="w3-container">
+        <p style="font-size: 30px; font-family: TimesNewRoman;">Spencer F. Goldberg</p>
+        <p style="font-size: 30px; font-family: TimesNewRoman;">Spencer is the cutest blogger of all bloggers in the U.S. He actually won the prize for cutest blogger in 2015 and 2016! 
+        You should definitely read his blog daily.</p>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+
+<!-- Contact modal page-->
+<div id="contact" class="w3-modal ">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container "> 
+        <span onclick="document.getElementById('contact').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <form action="form.asp" class="w3-container w3-card-4 w3-light-grey w3-text-white w3-margin">
+<h2 class="w3-center w3-dark-grey">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<button class="w3-btn-block w3-section w3-dark-grey w3-ripple w3-padding">Send</button>
+
+</form>
+    
+    </div>
+  </div>
+</div>
+<!-- End modal page-->
+  
+</div>
+
+</header>
+<!-- End header-->
+
+<!-- date-->
+<div class="date">
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+<!-- end date-->
+
+
+  <!-- search bar-->
+<form id="searchB" class="w3-display-topright w3-padding-4" >
+  <input id="searchB" class="f" type="text" name="search" placeholder="Search..">
+<!-- 
+ <input type="button" value="Search">
+ -->
+</form>
+<script type="text/javascript">
+    document.getElementById('searchB').onsubmit = function() {
+        window.location = 'http://www.google.com/search?q=site:yoursitename.com ' + document.getElementById('searchB').value;
+        return false;
+    }
+</script>
+</div>
+  <!-- end search bar-->
+
+
+<!-- Grid -->
+<div class="co">
+<div class="w3-row ">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="crowsMouth.jpg" alt="nature" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Bullies Don’t Win in America</b></h3>
+      <h5>Title description, <span class="w3-opacity">November 10, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p class="par">Let us all hope that President Trump conducts himself much better than Candidate Trump.
+
+When the people of the United States of America chose Donald Trump for president yesterday, they sent a message to us all that basic human decency is no longer an expectation of our society.
+Trump’s behavior during his campaign was outrageous and irredeemable.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button onClick="location.href='article1.html'" value='' class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge w3-hover-black">Read More</button></p>
+        </div>
+        <!-- 
+<div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+ -->
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+  <img src="lookingGlass.jpg" alt="crow" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Not Sayin’ Just Sayin’</b></h3>
+      <h5>Title description, <span class="w3-opacity">October 27, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p class="par">About a week ago I wrote a piece arguing that Donald Trump’s campaign strategy is intentionally designed to alienate voters. Today a report has come out explicitly describing team Trump’s voter suppression plan. 
+A senior official with the Trump campaign told Bloomberg Businessweek...</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button onClick="location.href='article2.html'" value='' class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge w3-hover-black">Read More</button></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div  class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card-2 w3-margin w3-margin-top">
+  <img src="lantern.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4 id="aboutMe"><b>Quote of the week</b></h4>
+      <p class="par" >"When the going gets tough, the weird turn pro." -H.S.T</p>
+    </div>
+  </div><hr>
+  
+  <!-- Recent Stories-->
+  <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Recent Stories</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="279H.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px; height:35px">
+        <span class="w3-large">Donald Trump’s Campaign Strategy Explained  
+        <span class="w3-opacity">- October 18, 2016</span>
+</span><br>
+        <span>The election is rigged, it’s not even worth voting unless you’re voting for me.
+          <button onClick="location.href='recent1.html'" value='' class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge w3-hover-black w3-small">Read More</button>
+</span>
+
+      </li>
+      <li class="w3-padding-16">
+        <img src="103H.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">8 Batshit Crazy Things You Must Believe to Support Donald Trump (And if You Don’t Believe Them, You Should Support Someone Else)
+            <span class="w3-opacity">- October 04, 2016</span>
+</span><br>
+        <span>1. All of our governmental institutions have failed us and cannot be trusted (except the police).
+                  <button onClick="location.href='recent2.html'" value='' class="w3-btn w3-white w3-border w3-border-red w3-round-xlarge w3-hover-black w3-small">Read More</button>
+</span>
+      </li> 
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+    <!-- end recent stories -->
+    
+ <!-- Archive-->
+
+ <div class="w3-card-2 w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Archive</h4>
+    </div>
+    <ul class="w3-ul  w3-white">
+      <li class="w3-padding-medium">
+       <div class="w3-accordion w3-light-grey">
+    <button onclick="myFunction('Demo1')" class="w3-btn-block w3-left-align">October 2016</button>
+    <div id="Demo1" class="w3-accordion-content w3-container ">
+      <h5 class="w3-bottombar w3-leftbar w3-rightbar w3-topbar">October 04</h5>
+      <p><a href="archive1.html">Adam Walinsky’s Piece in Politico Today Proves Trump’s Ambiguity is his Greatest Strength.</a></p>
+      <p ><a href="recent2.html">8 Batshit Crazy Things You Must Believe to Support Donald Trump (And if You Don’t Believe Them, You Should Support Someone Else)</a></p>
+      <h5 class="w3-bottombar  w3-leftbar w3-rightbar w3-topbar">October 18</h5>
+      <p><a href="recent1.html">Donald Trump’s Campaign Strategy Explained.</a></p>
+       <h5 class="w3-bottombar  w3-leftbar w3-rightbar w3-topbar">October 27</h5>
+      <p><a href="article2.html">Not Sayin’ Just Sayin’.</a></p>
+    </div>
+  </div>
+      </li>
+      <li class="w3-padding-medium">
+        <div class="w3-accordion w3-light-grey">
+        <button onclick="myFunction('Demo2')" class="w3-btn-block w3-left-align">November 2016</button>
+    <div id="Demo2" class="w3-accordion-content w3-container">
+      <h5 class="w3-bottombar  w3-leftbar w3-rightbar w3-topbar">November 10</h5>
+      <p><a href="article1.html">Bullies Don’t Win in America</a></p>
+      <!-- 
+<h5 class="w3-bottombar  w3-leftbar w3-rightbar w3-topbar">Example</h5>
+      <p><a href="#">Link</a></p>
+ -->
+    </div>
+    </div>
+      </li>
+    </ul>
+    <script>
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+  </div>
+  <hr> 
+  <!-- end archive-->
+  </div>
+
+<!-- comment box -->
+<form class="w3-container w3-light-grey " >
+<textarea class="one" id="words" rows="7" cols="50" placeholder="Leave a comment"></textarea>
+<span style="font-family: Georgia">
+<input type="button" onclick="getwords()" value="Enter" /> <br>
+</span>
+<div class="w3-container w3-section w3-border-left  w3-padding-12 ">
+<p id="para" ></p>
+</form>
+<script type="text/javascript">
+function getwords() {
+  text = words.value;
+  document.getElementById("para").innerHTML += '<p>'+text
+  document.getElementById("words").value = ""
+}
+</script>
+<!-- end comment box-->
+
+</div >
+
+<!-- END GRID -->
+</div>
+
+<!-- END w3-content -->
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+ <!-- 
+ <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+ -->
+  <p>Created by Alexandra Astwood</p>
+</footer>
+
+</body>
+</html>

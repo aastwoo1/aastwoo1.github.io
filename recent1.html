@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<title>SFG-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: TimesNewRoman;}
+textarea.one {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px
+    }
+ div.date { border-style: solid; border-width: 3px; text-align: center; font-family: TimesNewRoman;
+    
+}
+div.co{border-style: solid; border-width: 3px;}
+p {
+font-size:120%;
+font-family: TimesNewRoman;
+text-indent: 50px;
+line-height: 190%;
+
+
+}
+
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding-bottom:0px; padding-top:50px;"> 
+<div class="w3-row ">
+<div class="w3-col w3-container w3-large" style="width:25%">
+<ul class="w3-navbar">
+    <li><a class="w3-padding-2" href="#" onClick="location.href='blog.html'" ">Home</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('aboutMe').style.display='block'">About</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('contact').style.display='block'">Contact</a></li>
+  </ul>
+  
+<!--   target="_blank" -->
+
+</div>
+<div class="w3-col w3-container" style="width:55%">
+    <div class="w3-jumbo">The Lookout</div>
+
+</div>
+<div class="w3-col w3-container w3-large" style="width:20%">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<!-- About me modal page-->
+<div id="aboutMe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('aboutMe').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <h2>About me</h2>
+      </header>
+      <div class="w3-container">
+        <p>Spencer F. Goldberg</p>
+        <p>THE NEWS YOU DIDN'T KNOW YOU NEEDED TO KNOW</p>
+      </div>
+      <footer class="w3-container w3-black">
+        <p>Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+
+<!-- Contact modal page-->
+<div id="contact" class="w3-modal ">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container "> 
+        <span onclick="document.getElementById('contact').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <form action="form.asp" class="w3-container w3-card-4 w3-light-grey w3-text-white w3-margin">
+<h2 class="w3-center w3-dark-grey">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<button class="w3-btn-block w3-section w3-dark-grey w3-ripple w3-padding">Send</button>
+
+</form>
+    
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+</div>
+</header>
+<!-- End header-->
+<div class="date">
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+</div>
+
+<!-- Grid -->
+<div class="co">
+<div class="w3-row ">
+
+<!-- Blog entries -->
+<div class="w3-col 24 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="279H.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Donald Trump’s Campaign Strategy Explained</b></h3>
+      <h5><span class="w3-opacity">October 18, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>The election is rigged, it’s not even worth voting unless you’re voting for me.
+
+Critics, experts and journalists have yet to cease to be amazed by Republican Presidential nominee Donald Trump’s outrageous antics on the campaign trail of late. Just last week, Trump railed against a global conspiracy designed to cost him the election, declared that the American electoral system is rigged against him by President Obama, and destroyed 2 teleprompters in front of hundreds of cheering fans. Amidst all of this, Trump is also fending off at least 9 women who have come forward to accuse him of making unwanted sexual advances about which he has bragged on tape.
+ On television, Trump’s advocates have been increasingly belligerent and incoherent as they try to defend their nominee’s outrageous behavior. On its face it would seem that these actions defy explanation. Several writers have even speculated that Trump doesn’t actually want to be president. If one were actively trying to lose the race for the presidency, what more could one do than what Trump has already done?<br>
+
+This view overlooks Trump’s only true brilliance: media manipulation. The bizarre antics of the bombastic billionaire are not designed to win voters in the traditional sense. Instead, Trump seeks to alienate as many people as possible from the political process so that his weak coalition of mostly white and mostly male voters will be the only people motivated enough to go to the polls November 8th.<br>
+
+While actively attempting to dissuade people from voting may seem an irrational strategy for a presidential candidate, it would certainly explain Trump’s erratic behavior. Being ridiculous and occasionally downright distasteful only appeals to Trump’s marginalized and angry base. These are the people who will vote for him no matter what. As Trump himself suggested during the primaries, he really could shoot someone on 5th Avenue and people will still support him. Judging by recent polls, these people account for roughly 30-40% of the country.<br>
+
+Clinton has not generated anything remotely similar to the kind of enthusiasm that Trump has for the 30% of the country that will vote for him no matter what. (I do not think a politician should necessarily be responsible for generating enthusiasm anyway, but that is another article for another time). Trump already knows he has those voters and he knows that recent revelations about him will probably keep other voters from signing on, so his plan is not to expand his base but to capitalize on the lack of enthusiasm generated by the Clinton campaign.<br>
+
+Trump doesn’t want swing voters to vote for him – he wants them not to vote at all. The more outrageously Trump behaves, the more he is contrasted with Clinton, the more WikiLeaks releases, the less people will be interested in either candidate. Simply placing Clinton on the same stage as Trump degrades Clinton’s positions and preparedness to lead the country and creates a narrative of false equivalency. Trump will behave in ridiculous ways, Clinton will continue to be a respectable, cautious and reserved politician, and Americans will be so sick of both of them that many of us probably will stay home on election day.<br> 
+
+That is the outcome Trump is banking on. The more people he can turn off to the political process, the more likely his 30-40% of the country becomes 51% of the voters. It is a dangerous and absurd strategy from a dangerous and absurd man.<br> 
+
+By constantly decrying Clinton as a fraud and the election as rigged, Trump is convincing many not to vote at all. All the while the media continues to report what Trump says while also reporting Clinton’s rise in the polls. Because many people are only grudgingly voting for Clinton, Trump’s rhetorical debasement of the electoral process reinforces the idea that a Clinton win is guaranteed. We see Trump behaving in a way that is outrageous, we think, “Who could possibly vote for this guy?” Then we don’t bother turning up on election day because we assume Clinton should have had this thing in the bag six months ago.
+ Meanwhile, Trump’s ardent supporters, who he keeps encouraging to police the polls with their friends, end up constituting more than half of the people who bother to vote – and hand him the election.<br>
+
+This would be a scary enough prospect if there was not a recent precedent for its occurrence. The now notorious Brexit vote in which England decided to leave the European Union involved similar campaigns and similar assumptions. The polls showed a clear lead for the “stay” vote favored by most of the establishment and virtually every mainstream economist going into the election, but somehow it was the xenophobic and nationalistic “leave” campaign that triumphed. In retrospect, recent polls have shown that more people regret voting to leave the European Union than voting to stay. 
+Further, it appears that the majority of British people are unhappy with the decision, but fell into the same trap Trump is trying to set for us – namely – “This ‘leave’ idea is so absurd surely it will never happen, why even bother voting?” The next day it became clear that bothering to vote should have been a priority.<br>
+
+Voting to preserve the status quo is never done with enthusiasm. Why vote for what seems decent now when there are so many possibilities for what could be better? But we cannot let Trump’s brand of outrageous parody make its way into the Oval Office. We cannot be fooled into thinking that Trump is so absurd nobody will elect him. The truth is that if we fail to elect Clinton then yes, somebody will elect Trump.</p>
+      <div class="w3-row">
+    
+        <!-- 
+<div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+ -->
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+ <!-- 
+ <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+ -->
+  <p>Created by Alexandra Astwood</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<title>SFG-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: TimesNewRoman;}
+textarea.one {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px
+    }
+ div.date { border-style: solid; border-width: 3px; text-align: center; font-family: TimesNewRoman;
+    
+}
+div.co{border-style: solid; border-width: 3px;}
+p {
+font-size:120%;
+font-family: TimesNewRoman;
+text-indent: 50px;
+line-height: 190%;
+
+
+}
+
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding-bottom:0px; padding-top:50px;"> 
+<div class="w3-row ">
+<div class="w3-col w3-container w3-large" style="width:25%">
+<ul class="w3-navbar">
+    <li><a class="w3-padding-2" href="#" onClick="location.href='blog.html'" ">Home</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('aboutMe').style.display='block'">About</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('contact').style.display='block'">Contact</a></li>
+  </ul>
+  
+<!--   target="_blank" -->
+
+</div>
+<div class="w3-col w3-container" style="width:55%">
+    <div class="w3-jumbo">The Lookout</div>
+
+</div>
+<div class="w3-col w3-container w3-large" style="width:20%">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<!-- About me modal page-->
+<div id="aboutMe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('aboutMe').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <h2>About me</h2>
+      </header>
+      <div class="w3-container">
+        <p>Spencer F. Goldberg</p>
+        <p>THE NEWS YOU DIDN'T KNOW YOU NEEDED TO KNOW</p>
+      </div>
+      <footer class="w3-container w3-black">
+        <p>Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+
+<!-- Contact modal page-->
+<div id="contact" class="w3-modal ">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container "> 
+        <span onclick="document.getElementById('contact').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <form action="form.asp" class="w3-container w3-card-4 w3-light-grey w3-text-white w3-margin">
+<h2 class="w3-center w3-dark-grey">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<button class="w3-btn-block w3-section w3-dark-grey w3-ripple w3-padding">Send</button>
+
+</form>
+    
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+</div>
+</header>
+<!-- End header-->
+<div class="date">
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+</div>
+
+<!-- Grid -->
+<div class="co">
+<div class="w3-row ">
+
+<!-- Blog entries -->
+<div class="w3-col 24 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="183H.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>Adam Walinsky’s Piece in Politico Today Proves Trump’s Ambiguity is his Greatest Strength</b></h3>
+      <h5><span class="w3-opacity">October 04, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>By having no real stances or policies, the Republican Party’s nominee for president is whatever you want him to be. Unless of course you’re not a rich white man, in which case he is the same racist demagogue he has always been.<br> 
+
+Adam Walinsky, life-long Democrat and former speechwriter for Robert Kennedy, is apparently voting for Donald Trump. He is doing so because Trump, unlike Hillary Clinton, questions American alliances such as NATO and has, on occasion, suggested that we pull our troops out of places like Japan and South Korea. Somehow, according to Walinksy, this makes Trump the peace candidate, a modern day John F. Kennedy, who is determined to end America’s disturbing cycle of violence abroad.<br> 
+
+One would expect Walinsky to cite Trump’s detailed policy proposal which lays out a specific plan for the deescalation of hostilities across the globe that will enable our troops stationed far and wide to come home and bring us into a new era of peace and prosperity. Except he does not. Because this policy does not exist.<br> 
+
+This is the essence of Trump’s strategy – by making controversial statements and constantly shifting his positions, the Trump campaign has something for everyone. Are you a peace loving, left-leaning, Bernie Sanders supporting Democrat hoping to end American conflicts abroad? Well guess what, Trump has questioned our NATO alliances on national television!
+ That being said, he also suggested we “bomb the shit out of ISIS” and finish the war in Iraq by “taking the oil” – a universally condemned and illegal scheme that in reality would lead to a virtually endless conflict involving a massive American occupying force. So if you are a red-blooded war hawk, the Trump campaign has a place for you too!<br>
+
+Walinsky has fallen headfirst into this trap. His critique of the Democrat Party is accurate and well deserved, but the idea that Trump is the peace candidate is absurd on its face. Trump is the whatever you want him to be candidate. Walinsky tells us, “The elites of opinion and government have not hesitated to offer us instruction…these are the people who have led us into useless foreign wars.” 
+There were, however, plenty of these supposed “elites” who opposed the war in Iraq from day one. Had George W. Bush hired some of these experts in their respective fields instead of relics from the Cold War, perhaps we would not be in this cycle of violence in the Middle East today. Walinsky, however, does not advocate for an expert who has received the backing of hundreds of former military and government officials and who herself is a former Secretary of State with a lifetime of unprecedented experience in and around the Oval Office. 
+Instead, he thinks another failed businessman who was born into wealth will finally bring us world peace because of that one time Trump said something about letting Estonia fend off Russian aggression on its own unless it foots the bill.<br>
+
+Walinsky writes that we must “Commit to our own domestic peace and security rather than persist in a vain effort to control the lives and affairs of two hundred foreign nations” – a noble sentiment with which almost any American would agree, until, tellingly, he adds “This, as I understand it, (emphasis mine) is the platform of Donald Trump.” 
+Apparently a peaceful realignment of the United States military is the bulwark of the Trump campaign. Someone should probably tell that to all the people chanting “build a wall” at his rallies.<br> 
+
+Regardless, this is what Walinsky thinks Trump is really saying. And perhaps he is right. Donald Trump has a few times said some things that may have made some sense. For Walinsky, that those things were said in between all the other crazy – not to mention racist – things Trump said that make no sense at all is beside the point. The words “as I understand it” would have no place in a sentence describing Trump’s platform if Trump had an actual platform, because then you would understand it. We would all understand it.
+ It would be there for all of us to see and understand. Go to the positions page on his campaign website, there is (no, none, nada, zilch, bupkis) not one single policy position advocating for the priorities Walinsky claims have pushed him to give Trump his support.<br>  
+
+The only area where Trump has not engaged in this brand of doublespeak is in his racist demagoguery.<br> 
+
+If anything has been consistent in Trump’s statements, it is that they continually disparage minorities and offend Americans of every stripe while elevating to the mainstream rhetoric that was once the hallmark of white supremacist Reddit threads. 
+I need not reiterate the list, but lest we forget, this is the man who began his political career by questioning the first African-American President’s heritage, kicked off his campaign by referring to our Mexican neighbors as rapists (“Though some, I assume, are good people”), and pretended to appeal to people of color by describing their lives as a dystopian nightmare whilst asking for their vote by saying, “What have you got to lose?” (For a complete list see Keith Olbermann’s “176 Reasons Trump Should Not Be President.“)<br>
+
+In a Faustian way to reconcile his political beliefs with whatever is left with his conscience, Walinsky does address Trump’s uncouth behavior. He tells us, “You and I will have to compensate for his deficits of civility, in return for peace.”
+ What Walinsky fails to understand is that while he and other wealthy white men will have to learn to deal with Trump’s lack of civility, the rest of America will be forced to deal with an era of reinvigorated racism. Walinsky can afford to hang on to that-one-time-Trump-said-something-that-made-sense while ignoring all the other terrible proposals Trump has floated that disparage and demonize minorities across the country and the world because he only has to “compensate” for Trump’s “deficits of civility.”<br> 
+
+I’m sure black and Hispanic Americans will feel just fine making this compensation as our militarized police force belittles and insults them with unconstitutional stop-and-frisk tactics advocated by none other than the President of the United States.
+
+But don’t worry – there will finally be peace abroad. As Walinsky sees it.
+</p>
+      <div class="w3-row">
+    
+        <!-- 
+<div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+ -->
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+ <!-- 
+ <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+ -->
+  <p>Created by Alexandra Astwood</p>
+</footer>
+
+</body>
+</html>

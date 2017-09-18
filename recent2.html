@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<title>SFG-Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: TimesNewRoman;}
+textarea.one {
+    border-style: solid;
+    border-color: black;
+    border-width: 3px
+    }
+ div.date { border-style: solid; border-width: 3px; text-align: center; font-family: TimesNewRoman;
+    
+}
+div.co{border-style: solid; border-width: 3px;}
+p {
+font-size:120%;
+font-family: TimesNewRoman;
+text-indent: 50px;
+line-height: 190%;
+
+
+}
+
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding-bottom:0px; padding-top:50px;"> 
+<div class="w3-row ">
+<div class="w3-col w3-container w3-large" style="width:25%">
+<ul class="w3-navbar">
+    <li><a class="w3-padding-2" href="#" onClick="location.href='blog.html'" ">Home</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('aboutMe').style.display='block'">About</a></li>
+    <li><a class="w3-padding-2" href="#" onclick="document.getElementById('contact').style.display='block'">Contact</a></li>
+  </ul>
+  
+<!--   target="_blank" -->
+
+</div>
+<div class="w3-col w3-container" style="width:55%">
+    <div class="w3-jumbo">The Lookout</div>
+
+</div>
+<div class="w3-col w3-container w3-large" style="width:20%">
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-facebook-official"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-light-blue w3-show-inline-block"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="w3-hover-white w3-hover-text-indigo w3-show-inline-block"><i class="fa fa-linkedin"></i></a>
+</div>
+
+<!-- About me modal page-->
+<div id="aboutMe" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container w3-black"> 
+        <span onclick="document.getElementById('aboutMe').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <h2>About me</h2>
+      </header>
+      <div class="w3-container">
+        <p>Spencer F. Goldberg</p>
+        <p>THE NEWS YOU DIDN'T KNOW YOU NEEDED TO KNOW</p>
+      </div>
+      <footer class="w3-container w3-black">
+        <p>Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+
+<!-- Contact modal page-->
+<div id="contact" class="w3-modal ">
+    <div class="w3-modal-content w3-animate-top w3-card-8">
+      <header class="w3-container "> 
+        <span onclick="document.getElementById('contact').style.display='none'" 
+        class="w3-closebtn">&times;</span>
+        <form action="form.asp" class="w3-container w3-card-4 w3-light-grey w3-text-white w3-margin">
+<h2 class="w3-center w3-dark-grey">Contact Us</h2>
+ 
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+    </div>
+</div>
+
+<div class="w3-row w3-section">
+  <div class="w3-col w3-dark-grey" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+    <div class="w3-rest">
+      <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+    </div>
+</div>
+
+<button class="w3-btn-block w3-section w3-dark-grey w3-ripple w3-padding">Send</button>
+
+</form>
+    
+    </div>
+  </div>
+</div>
+
+<!-- End modal page-->
+</div>
+</header>
+<!-- End header-->
+<div class="date">
+<p id="demo"></p>
+<script>
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toDateString();
+</script>
+</div>
+
+<!-- Grid -->
+<div class="co">
+<div class="w3-row ">
+
+<!-- Blog entries -->
+<div class="w3-col 24 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="103H.jpg" alt="Nature" style="width:100%">
+    <div class="w3-container w3-padding-8">
+      <h3><b>8 Batshit Crazy Things You Must Believe to Support Donald Trump (And if You Don’t Believe Them, You Should Support Someone Else)</b></h3>
+      <h5><span class="w3-opacity">October 04, 2016</span></h5>
+    </div>
+
+    <div class="w3-container">
+      <p>1. All of our governmental institutions have failed us and cannot be trusted (except the police).<br>
+
+Based on the things Trump has said, his supporters must believe that the federal government is run entirely by people who are incompetent at best and criminal at worst. Trump supporters have to believe that the Federal Bureau of Investigation cannot effectively investigate, the military cannot effectively manage its resources and its service members cannot be trusted, voting may be rigged, the actions of a judge may be dictated by his ethnicity and our government is so full of moronic bureaucrats that no one ever even considered building a wall on our southern border to keep undocumented immigrants out. On this point Trump has been most explicit, the wall between the US and Mexico is a major focal point of Trump’s campaign.
+ This means that if you support Trump you believe that our government is so inept and oversensitive about illegal immigration that no one ever once thought that we could immediately solve the problem by building an “impenetrable wall.” Or, perhaps you are more conspiratorially minded, and instead believe that President Obama and his fellow Democrats are attempting to build an unbeatable coalition of new Hispanic voters despite the fact that Obama himself has deported more people than any president in American history. Of course, as a Trump supporter, you must not accept that as true anyway because it’s a statistic that comes from our overwhelmingly maladroit federal government.<br>
+
+Despite your lack of faith in the vast majority of government institutions, to support Trump you must also believe that all police are inherently good and are rarely, if ever, mistaken when they use deadly force. You are so certain that this government institution is incorruptible that you also believe the police should be granted further powers to use racial profiling and stop-and-frisk tactics to harass anyone they deem suspicious. While the state governments responsible for managing elections may rig the vote for Hillary Clinton, state and local police can do no wrong. Trump’s response to a question about healing the racial divide in America during Monday’s debate was to argue for increasing the use of stop-and-frisk.
+ Therefore to support Trump you must believe either that people of color who are forced to endure being hassled by police simply for existing are more than content to sacrifice their civil rights for the sake of “law and order” or that all people of color deserve to be treated like suspects at all times.<br>
+
+2. The black community is an unbearable landscape of poverty and murder that more closely resembles a developing country than it does the United States.<br>
+
+Trump keeps telling his crowded rallies of mostly white voters that black communities across the country have fallen into disrepair where gangs of minorities ransack businesses and wage constant war against each other. If you support Trump, then presumably you share his belief that the lives of black people in America today are worse than those of their ancestors during slavery and the height of Jim Crow segregation. If you stand behind this candidate then you agree that being literal human chattel wasn’t anywhere near as bad as being snubbed on Oscar night. And of course, none of the struggles in black communities can be attributed to systemic racism – on that front our government has been fully capable of scaling back segregation and implementing the Civil Rights Act.
+ They may not be able to run an election or manage a border, but clearly you believe that all these institutions you doubt so much have done a whole lot for people of color in America. Of course, increasing murder rates in some major cities could not have anything to do with the breakdown in trust between black communities and police officers and must therefore be entirely the fault of black communities. Trump supporters know this is the truth even though logic, common sense and good old fashioned facts prove that it so obviously is not.<br>
+
+3. Hillary Clinton is the most dishonest candidate in history.<br>
+
+Politicians, just like all human beings, often stretch the truth, embellish details or use hyperbole to communicate (read: lie). Clinton is not exempt from this truth. Sure, she was never under Bosnian sniper fire, and certainly, she did say the TransPacific Partnership was the gold standard of trade agreements even while telling us she said otherwise, but to support Trump you would have to believe that Clinton singlehandedly destroyed our economy, ran the State Department like an outpost of her charity and literally founded ISIS. And then lied about all of that too. That’s not even getting into how she murdered a close friend and is unfaithful to Bill Clinton. 
+So, as a Trump supporter, we can only assume that you believe that Clinton is so incompetent that she caused the Benghazi attacks yet still managed to plan and execute a murder undetected all while conducting an illicit affair that we know nothing about even to this day.<br> 
+
+Also Clinton wants to take all of your guns away despite her clearly articulated plan for reasonable, common sense gun control initiatives.<br> 
+
+4. Many of the things Donald Trump has said are true.<br>
+
+Presumably, because Clinton’s dishonesty is a disqualifying trait for the presidency, then Trump must be a paragon of civic virtue. Trump supporters have to believe that many of the inane, incoherent and blatantly dishonest things that Trump says are true. Believing anything Trump says is true is even more of a stretch than believing that everything “Crooked Hillary” says is a lie. Trump lies. Constantly. Flagrantly. Repeatedly. The list of dishonest things he says is so great that journalists literally struggle to keep up.<br>
+
+Which brings us to the next batshit crazy thing:<br>
+
+5. The media is full of hacks who only care about profit margins and their liberal elitist agenda.<br>
+
+To support Trump means that you know that nothing negative about Trump that has ever been printed or said has been true and the “mainstream media” is trying to keep you misinformed to advance its liberal agenda. If you support Trump then you know that any facts and figures thrown at you by any kind of “reliable source” are probably untrue or slanderous. Did Trump oppose the war in Iraq? Does telling Howard Stern in 2002 “I guess” count as support for the war? Up until the debate Trump would have you believe not only that he never said this, but that he was actually an outspoken opponent of the intervention in Iraq. If you support Trump you believe that he was never for the war in Iraq and that despite not being a figure in government he showed the kind of restraint and foresight we would like to see from our leaders.
+ That there is no evidence to back this up is just proof of the liberal media’s ineptitude.<br>
+
+Beyond all of this, you also have to doubt the nearly endless list of experts across the board who have written to numerous publications their near universal condemnation of the vast majority of the “policies” Trump has espoused. Then, you also must think that the most reliable source of information is famous “not journalist” Sean Hannity, who has admitted to being one of Trump’s close friends and is known to have provided the campaign with consistent unsolicited advice. Of course, whilst railing against the wealthy liberal elites who profit from raising social justice hysteria, Hannity collects a $29 million paycheck from Fox News and maintains a residence in one of the most wealthy (and white) parts of New York City. 
+So much for liberal elitist journalists making a fortune off of Trump – no one has profited more from Trump’s rise than Hannity and other members of his right wing cabal who were eager to jump on the Trump train. But you support Trump and agree with Hannity so it’s easy to overlook these things.<br>
+
+6. Islam is the antithesis of everything the United States stands for and unless we do something Muslims will take over our government and ruin freedom.<br>
+
+Trump supporters know that Muslims are inherently un-American even if they are born in this country. If you support Trump then you surely agree that we should digitally tag every Muslim in America and spy on mosques across the nation. A key plank of whatever foreign policy structure Trump has is that Muslim immigrants and refugees should be banned from the country until we “figure out what’s going on.” This requires Trump supporters to believe that our current government has no idea about “what’s going on” and that under Trump – and only Trump – we will figure it out. How you ask? Well, to support Trump you believe that he has a secret plan for defeating ISIS which he has committed to with his nonexistent team of experts. These experts, of course, are the experts you can trust, unlike the vast majority of experts mentioned above who agree that Trump is unfit for the presidency.<br>
+
+7. Everything would be fine in Iraq right now if we just took the oil like Trump said in the beginning.<br>
+
+Taking the oil has been universally decried as not only an illegal strategy that would implicate the United States in a war crime and deprive us of what little foreign support we have left, but also an impossible scheme which would have to involve a massive occupying force that would do little to stem the rise of ISIS in the Middle East. Trump supporters are sensible people, and they rely on Trump’s own famed (and oft bragged about) practicality and common sense. This means that they must believe that logic dictates that taking a foreign country’s only reliable resource and claiming it as our own could never possibly lead to further conflict or terrorist activity but would instead help engender peace and understanding across the globe.<br>
+
+8. Trump did not start and propagate rumors about Obama’s birthplace – he helped put the issue to rest.<br>
+
+If you support Trump then you at one point believed or perhaps even still believe that Obama was not actually born in the United States. It was clear that Trump himself believed this up until two weeks ago when he proudly proclaimed that it was Clinton, not Trump, who first brought attention to the possibility that Obama is not an American and reassured the press that by raising this issue he was able to put these conspiracies to rest. That there were only 124 days left in Obama’s presidency when Trump came to this conclusion that everyone else already knew despite Trump’s harping on his birther claims for the last 6 years is irrelevant to you because you know, like Trump said, “there’s something going on” with Obama that makes him untrustworthy and un-American. Certainly this “something” has nothing to do with Obama being African-American, it must be some other obvious physical trait that makes him different from every other president we’ve ever had.
+ Trump supporters have to believe either that Trump is telling the truth about Obama and Clinton, which he so clearly is not because we were all there, or that Trump still thinks there is something suspect about Obama but is trying to put this issue behind him because of the liberal freak out about the inherent racism in questioning the birthplace of the first African-American president. If you support Trump, you’re totally fine with that. That nobody questioned John McCain’s birthplace, who actually was not born in the United States, proves nothing, Trump resolved the issue that Trump made up because Trump says Trump resolved it. The fact that everyone who hasn’t lived under a rock for the past 8 years knows that this is bullshit doesn’t change anything because you’re going to Make America Great Again dammit.<br>
+
+This is more than batshit crazy, we’re now crossing into the realm of mass hysteria. We were all here, we all know all the things Trump said and did and Tweeted (and Tweeted again) about Obama and his birthplace. Trump supporters sleep just fine at night because they know their preferred candidate is always honest – even when he’s lying – because he told them so and he would never lie.<br> 
+
+* Trump supporters rely on what they feel their candidate is saying because what their candidate really says is often incomprehensible, hypocritical and contradictory.<br>
+
+This idea is an asterisk on the list because it is less batshit crazy and more a reflection of our universal human nature. Many people, even a respected former speechwriter for Robert Kennedy, base their support for Trump off of their understanding of what he says as opposed to what he actually says. Trump speaks for many Americans with the kind of direct and forceful language that they use in their day to day lives. Sure he’s unpolished and often inarticulate, but so are so many of us. The Republican nominee has little patience for trivial things like political correctness and the mundane and arbitrary rules elites have deemed invaluable to polite civic discourse. Trump seems to speak from the heart about the issues he feels America is struggling with and the burdens of our country’s workers as he understands them. Those for whom Trump has the most appeal are those who hear him and feel that he is representing them through his very mode of communication. People tend to agree more with people who look, sound and act similarly to themselves.
+ This is a part of our primitive past with which we will always be forced to contend.<br>
+
+My question to those who support Trump for this reason is: since when was the major defining qualification for president of the United States based on how you personally identify with him? Would you trust a mechanic to perform heart surgery just because he said out loud some of the things you’ve thought about heart surgery? Then why would you trust a businessman with no experience in government with our country? To do so means subscribing to at least one of the 8 Batshit Crazy Things listed above.<br>
+
+The few policy proposals Trump has are either virtually impossible to enact or so scant on details that we can only gather information about them through inference. This means that if you are voting for Trump it is less because of what he says he will do and more because of what you feel like he will do. Once in power, Trump will do whatever it is Trump wants to do.<br>
+
+It is your civic duty as an American citizen to denounce in the broadest terms possible the candidacy of Donald J. Trump.<br>
+
+At this point supporting Trump for president is treacherous to every ideal America represents. Will our inalienable rights be safe under a man who has shown himself to be vindictive, defensive and ignorant to the issues that effect so many of us? Will we all be guaranteed life, liberty and the pursuit of happiness under a leader who has openly called for racially profiling our fellow Americans? This point is perhaps the only one on which Trump has spoken clearly. How can we look into the eyes of any people of color who are our friends and neighbors in this great nation and tell them that when a presidential candidate spoke to us about how he would infringe on their rights as citizens we supported him anyway because he appealed to our base human instincts?<br>
+
+Do the right thing. Let go of this Trump pipe-dream and vote for Hillary Clinton. Our politicians don’t need to sound like us to represent us. They need to have effective policy measures and organizations in place to keep us safe and ensure that a portion of the American Dream is available us all. Spend the next four years disagreeing with Clinton’s policies, but don’t let your disagreements with her allow a man running a knowledge and truth free campaign take over the greatest country in the world just because he says some of the things you have been thinking. That is what our entertainers are for, not our leaders.<br> 
+
+Further, if you are thinking instead that you will not support either candidate, this amounts to a vote for Trump. Clinton has not generated the same enthusiasm as the Trump campaign. If only the enthusiastic (and therefore invariably batshit crazy) people vote because us reasonable people don’t bother to care, then we are all complicit in allowing Trump to become the most dangerous president of the United States in history.<br>
+
+If you care about America and its people, don’t be batshit crazy. Get out and vote for Hillary Clinton.<br> 
+</p>
+      <div class="w3-row">
+    
+        <!-- 
+<div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+ -->
+      </div>
+    </div>
+  </div>
+  <hr>
+  
+<!-- END BLOG ENTRIES -->
+</div>
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+ <!-- 
+ <button class="w3-btn w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-btn w3-padding-large w3-margin-bottom">Next »</button>
+ -->
+  <p>Created by Alexandra Astwood</p>
+</footer>
+
+</body>
+</html>
